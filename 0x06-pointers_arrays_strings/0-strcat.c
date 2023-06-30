@@ -1,17 +1,29 @@
 #include "main.h"
-
 /**
- * _isupper - uppercase letters
- * @c: char to check
+ * _strcat - concatenates two strings
+ * @dest: input value
+ * @src: input value
  *
- * Return: 0 or 1
+ * Return: void
  */
-
-int _isupper(int c)
+char *_strcat(char *dest, char *src)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	else
-		return (0);
-}
+	int i;
+	int j;
 
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+
+	dest[i] = '\0';
+	return (dest);
+}
